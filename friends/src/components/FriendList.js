@@ -4,7 +4,9 @@ import Friend from "./Friend";
 const FriendList = props => (
   <div className="friends-list">
     {props.friends.map(friend => (
-      <Friend friend={friend} key={friend.id}/>
+      <Friend 
+      deleteFriend={props.deleteFriend} 
+      friend={friend} key={friend.id}/>
     ))}
   </div>
 );

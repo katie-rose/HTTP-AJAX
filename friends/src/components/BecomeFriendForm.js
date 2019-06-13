@@ -12,11 +12,15 @@ class BecomeFriendForm extends React.Component {
       }
     };
   }
-
+  
   handleChanges = e => {
     this.setState({
       friendInput: {
         ...this.state.friendInput,
+        [e.target.name]: e.target.value
+      },
+      updatedFriend: {
+        ...this.state.updatedFriend,
         [e.target.name]: e.target.value
       }
     });

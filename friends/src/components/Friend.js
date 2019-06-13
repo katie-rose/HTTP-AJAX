@@ -14,6 +14,12 @@ const Friend = props => (
       <strong>E-Mail:</strong>
       <br /> {props.friend.email}
     </p>
+    <button
+      onClick={e => props.deleteFriend(e, props.friend.id)}
+      className="md-button"
+    >
+      Delete friend
+    </button>
   </div>
 );
 
