@@ -38,7 +38,7 @@ class BecomeFriendForm extends React.Component {
             name="name"
             placeholder="Hello, your name is:"
             onChange={this.handleChanges}
-            value={this.state.friendInput.age}
+            value={this.state.friendInput.name}
           />
           <Label>Age: </Label>
           <Input
