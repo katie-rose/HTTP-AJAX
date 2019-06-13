@@ -23,12 +23,24 @@ class App extends React.Component {
       });
   }
 
+  addFriend = (e, friendInput) => {
+    e.preventDefault();
+    const newFriend = {
+      name: friendInput.name, 
+      age: friendInput.age, 
+      email: friendInput.email
+    };
+    this.setState({
+      friends: [...this.state.friends, newFriend]
+    })
+  }
+
   render() {
     return (
       <div className="App">
         <header className="App-header" />
         <FriendList friends={this.state.friends} />
-        <BecomeFriendForm />
+        <BecomeFriendForm addFriend={this.addFriend} />
       </div>
     );
   }
